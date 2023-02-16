@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :articles
   devise_for :users
   root 'splash_screen#index'
   resources :users, only: %i[ create update destroy]
